@@ -50,6 +50,10 @@ exports.up = function(knex) {
                 .inTable("ingredients")
                 .onDelete("RESTRICT")
                 .onUpdate("CASCADE");
+            
+            tbl.float("quantity")
+                .unsigned()
+                .notNullable();
         })
 };
 
